@@ -5,13 +5,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* the below does the same with only 2 lines of code
+  display: grid;
+  plate-items: center;
+  */
 }
 
 .game-table {
   min-height: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; /* repeat(3, 1fr) */
+  grid-template-rows: 1fr 1fr 1fr; /* this is not needed if you plan to only have 9 elements */
 }
 
 .table-cell {
