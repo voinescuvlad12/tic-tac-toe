@@ -11,14 +11,14 @@ const winners = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-const cell = document.getElementsByClassName("table-cell");
+const cell = document.getElementsByClassName('table-cell');
 
 for (let i = 0; i < cell.length; i++) {
   cell[i].addEventListener(
-    "click",
+    'click',
     function () {
       if (!cell[i].innerHTML) {
-        cell[i].innerHTML = turn ? "X" : "O";
+        cell[i].innerHTML = turn ? 'X' : 'O';
         addValues(turn, i);
         turn = !turn;
       }
@@ -38,9 +38,12 @@ function addValues(turn, i) {
 }
 
 function check(passedArray, turn) {
+  // this should be a forEach
+  // a map also returns an array as a result
   winners.map((winnersArray) => {
     if (winnersArray.every((element) => passedArray.includes(element))) {
-      alert(`${turn ? "X" : "O"} won the game`);
+      // if multiple conditions for a WIN is met, there will be multiple alerts
+      alert(`${turn ? 'X' : 'O'} won the game`);
       clear();
     }
   });
@@ -55,6 +58,6 @@ function clear() {
   xindexes = [];
   yIndexes = [];
   for (let i = 0; i < cell.length; i++) {
-    cell[i].innerHTML = "";
+    cell[i].innerHTML = '';
   }
 }
