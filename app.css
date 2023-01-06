@@ -1,0 +1,25 @@
+.main-container {
+  width: 600px;
+  height: 600px;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-table {
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.table-cell {
+  border: "1px solid black";
+  height: 50px;
+  width: 50px;
+}
+
+.table-cell:hover {
+  background-color: #c0ccc0;
+}
